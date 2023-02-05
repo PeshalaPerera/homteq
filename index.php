@@ -20,14 +20,14 @@ while ($arrayp = mysqli_fetch_array($exeSQL)) {
     //display the small image whose name is contained in the array
     //make the image into an anchor to prodbuy.php and pass the product id by URL (the id from the array)
     echo "<a href=prodbuy.php?u_prod_id=" . $arrayp['prodId'] . ">";
-    echo "<img src=images/" . $arrayp['prodPicNameSmall'] . " height=200 width=200>";
+    echo "<img src=images/" . $arrayp['prodPicNameSmall'] . " height=200 width=300>";
     //close the anchor
     echo "</a>";
     echo "</td>";
     echo "<td style='border: 0px'>";
     echo "<p><h5>" . $arrayp['prodName'] . "</h5>"; //display product name as contained in the array
     echo "<p>" . $arrayp['prodDescripShort'];
-    echo "<p>&pound" . $arrayp['prodPrice'];
+    echo "<p><b>&pound" . $arrayp['prodPrice'] . "</b>";
     echo "</td>";
     echo "</tr>";
 }
